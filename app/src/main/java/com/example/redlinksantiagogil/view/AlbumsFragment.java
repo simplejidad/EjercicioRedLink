@@ -97,7 +97,7 @@ public class AlbumsFragment extends Fragment implements AlbumAdapter.ItemClickLi
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String filter = s.toString();
-                albumAdapter.filterAlbumList(filter);
+                if (albumAdapter != null) albumAdapter.filterAlbumList(filter);
             }
 
             @Override
